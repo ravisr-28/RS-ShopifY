@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoBagAddSharp } from 'react-icons/io5';
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setProducts } from '../../redux/productSlice';
+import { TopProducts } from '../../data/CategoriesData';
+import { addtoCart } from '../../redux/cartSlice';
 
 const FilterData = () => {
     const filterProducts = useSelector(state => state.product.filteredData)
+    const dispatch = useDispatch()
+     useEffect(() => {
+       dispatch(setProducts(TopProducts));
+     }, []);
+     const handleAddToCart = (e, product) => {
+       e.stopPropagation();
+       e.preventDefault();
+       dispatch(addtoCart(product));
+     };
   return (
     <div className="bg-neutral-900 py-6">
       {filterProducts.length > 0 ? (
         <div>
-          <h1 className="text-gray-200 mt-20 font-bold md:text-5xl text-3xl text-center ">
+          <h1 className="text-gray-200 md:mt-20 mt-24 font-bold md:text-5xl text-3xl text-center ">
             All Items.
           </h1>
           <div className="md:grid md:grid-cols-5 gap-4 space-y-4 md:space-y-0 py-5  md:px-12 px-4">

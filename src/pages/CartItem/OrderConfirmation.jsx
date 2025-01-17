@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 const OrderConfirmation = ({Order}) => {
   const navigate = useNavigate()
   return (
-    <div className="bg-neutral-900 pt-28 pb-8 px-12">
-      <h3 className="text-gray-200">Thank You for your order.</h3>
-      <p className="text-gray-200">
+    <div className="bg-neutral-900 pt-28 pb-8 md:px-12 px-4">
+      <h3 className="text-gray-200 font-semibold">Thank You For Your Order !</h3>
+      <p className="text-gray-200 font-light text-[13px]">
         Your order has been placed successfully you will receive an email
         confirmation shortly.
       </p>
@@ -22,7 +22,7 @@ const OrderConfirmation = ({Order}) => {
         <div>
           <h4 className="text-gray-200 font-bold mt-2">Ordered Products</h4>
           {Order.products.map((product) => (
-            <div className="flex justify-between">
+            <div key={product.id} className="flex justify-between">
               <h4 className="text-gray-200 font-extralight text-[14px]">
                 {product.name} x {product.quantity}
               </h4>
@@ -37,7 +37,7 @@ const OrderConfirmation = ({Order}) => {
           <h4 className="text-gray-200 font-semibold">&#8377;{Order.totalPrice.toFixed(2)} </h4>
         </div>
       </div>
-      <div className="space-x-5">
+      <div className="md:space-x-5 space-y-4 md:space-y-0">
         <button className="px-8 py-2 text-gray-200 font-bold text-[14px] bg-red-600 rounded-md">
           Order Tracking
         </button>
@@ -50,3 +50,7 @@ const OrderConfirmation = ({Order}) => {
 }
 
 export default OrderConfirmation
+
+// Tu rahna loyalty ke sath main tera har hadd tk sath nibhaunga,meri feelings ka samman tu krna main tere sajde me bhi sar jhukaunga, koi puchega tere baare me toh saan se sabko bataunga,lekin agar man bana liya hoga tune jaane ka to tujhe rok bhi n paunga,par jaan hai tu meri is baat se main kyun sarmaunga,koi puchega tere baare me toh saan se sbko bataunga ki mere hathon ki lakir hai tu,mere pairon ki moch hai,tu hamdard hai meri zindagi ka haan tu meri jaan hai.
+
+// 7070843526

@@ -28,8 +28,8 @@ const CheckoutPage = ({setOrder}) => {
 
   return (
     <div className="py-20 px-4 md:px-16 lg:px-24 bg-neutral-900">
-      <h2 className="text-2xl font-semibold mt-4 text-gray-200">CheckOut</h2>
-      <div className="flex flex-col md:flex-row justify-between space-x-10 mt-8">
+      <h2 className="text-2xl font-semibold md:mt-4 mt-8 text-gray-200">CheckOut</h2>
+      <div className="flex flex-col md:flex-row justify-between md:space-x-10 mt-8">
         <div className="md:w-2/3">
           {/* Billing */}
           <div className="border p-2 mb-6">
@@ -216,7 +216,7 @@ const CheckoutPage = ({setOrder}) => {
           <h2 className="text-gray-200 font-bold">Order Summary</h2>
           <div>
             {cart.products.map((product) => (
-              <div className="">
+              <div className="" key={product.id}>
                 <div className="flex rounded-md bg-neutral-900 p-2 mt-2 shadow-lg">
                   <img
                     src={product.image}

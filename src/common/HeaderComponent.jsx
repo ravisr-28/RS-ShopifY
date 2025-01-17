@@ -87,7 +87,7 @@ const HeaderComponent = () => {
           <Link to={"/cart"} className="relative">
             <FaShoppingCart className="text-gray-200 mt-0.5 mr-2" size={20} />
             {products.length > 0 && (
-              <span className="md:block hidden absolute text-gray-200 top-[-4px] right-0 bg-red-700 rounded-full px-1.5 text-[10px]">
+              <span className="md:block hidden absolute text-gray-200 top-[-4px] right-0 bg-red-700 rounded-full px-1.5 py-1 text-[10px]">
                 {products.length}
               </span>
             )}
