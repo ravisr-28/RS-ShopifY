@@ -46,7 +46,7 @@ export default function LoginPage() {
               Don't have an account? 
               <Link
               to={"/register"}
-                className="underline-offset-4 font-semibold text-gray-200 underline"
+                className="underline-offset-4 ml-1 font-semibold text-gray-200 underline"
               >
                 Sign up for free.
               </Link>

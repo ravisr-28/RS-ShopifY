@@ -17,7 +17,7 @@ const TopProductCard = ({ product,handleAddToCart }) => {
               {product.name}
             </h1>
             <h3 className="text-white px-2">
-              &#8377;:- <span className="font-bold">{product.price}</span>
+              &#8377;:- <span className="font-bold">{product.price}.00</span>
             </h3>
           </div>
           <button onClick={(e)=>{handleAddToCart(e,product)}} className="text-[14px] font-bold text-gray-200 px-4 rounded-sm mr-1 bg-red-700 md:block hidden">

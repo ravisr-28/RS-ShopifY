@@ -18,7 +18,7 @@ const ShopPage = () => {
     }
   return (
     <div className="bg-neutral-900 py-6">
-      <h1 className="text-gray-200 mt-20 font-bold md:text-5xl text-3xl text-center ">
+      <h1 className="text-gray-200 md:mt-20 mt-24 font-bold md:text-5xl text-3xl text-center ">
         SHOP
       </h1>
       <div className="md:grid md:grid-cols-5 gap-4 space-y-4 md:space-y-0 py-5  md:px-12 px-4">

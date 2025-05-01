@@ -47,17 +47,17 @@ export default function RegisterPage() {
               type="submit"
               className="w-full rounded-lg bg-red-600 px-4 py-2 text-center text-base font-semibold text-gray-200 shadow-md"
             >
-              Log in
+              Sign up
             </button>
           </form>
           <div className="py-12 text-center">
             <p className="whitespace-nowrap text-gray-400">
-              Already have an account?
+              Already have an account? 
               <Link
                 to={"/login"}
-                className="underline-offset-4 font-semibold text-gray-200 underline"
+                className="underline-offset-4 font-semibold ml-1 text-gray-200 underline"
               >
-                Log In
+                 Log In
               </Link>
             </p>
           </div>
